@@ -31,15 +31,20 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
     }
 
 
-    public ConversationAdapter(List<Conversation> moviesList) {
-        this.conversationList = moviesList;
+    public ConversationAdapter(List<Conversation> conversationList) {
+        this.conversationList = conversationList;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.conversation_list_row, parent, false);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
         return new MyViewHolder(itemView);
     }
 

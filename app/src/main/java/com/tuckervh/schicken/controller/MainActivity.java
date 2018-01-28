@@ -1,10 +1,14 @@
 package com.tuckervh.schicken.controller;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Toast;
 
 import com.tuckervh.schicken.R;
 import com.tuckervh.schicken.model.Conversation;
@@ -17,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private Context context = this;
 
     private List<Conversation> conversationList = new ArrayList<>();
 
@@ -29,6 +34,19 @@ public class MainActivity extends AppCompatActivity {
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
+
+        mRecyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(this, mRecyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        Intent intent = new Intent(context, ConversationActivity.class);
+                        startActivity(intent);
+                    }
+
+                    @Override public void onLongItemClick(View view, int position) {
+                        Toast.makeText(context, "long", Toast.LENGTH_SHORT).show();
+                    }
+                })
+        );
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
