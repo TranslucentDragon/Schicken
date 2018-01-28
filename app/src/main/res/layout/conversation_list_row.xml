@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:maxHeight="70dp"
-    android:minHeight="70dp">
+    android:maxHeight="80dp"
+    android:minHeight="80dp">
 
     <TextView
         android:id="@+id/list_initials"
