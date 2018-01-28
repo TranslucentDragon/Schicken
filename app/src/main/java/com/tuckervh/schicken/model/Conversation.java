@@ -6,7 +6,7 @@ package com.tuckervh.schicken.model;
 
 public class Conversation {
     private String name;
-    private long number;
+    private long phoneNumber;
     private String initials;
     private Message mostRecent;
 
@@ -24,12 +24,12 @@ public class Conversation {
         this.name = name;
     }
 
-    public long getNumber() {
-        return number;
+    public long getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setNumber(long number) {
-        this.number = number;
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getInitials() {
