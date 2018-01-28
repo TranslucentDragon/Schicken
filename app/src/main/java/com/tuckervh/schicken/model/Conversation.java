@@ -7,7 +7,6 @@ package com.tuckervh.schicken.model;
 public class Conversation {
     private String name;
     private long number;
-    private int color;
     private String initials;
     private Message mostRecent;
 
@@ -31,14 +30,6 @@ public class Conversation {
 
     public void setNumber(long number) {
         this.number = number;
-    }
-
-    public int getColor() {
-        return color;
-    }
-
-    public void setColor(int color) {
-        this.color = color;
     }
 
     public String getInitials() {
