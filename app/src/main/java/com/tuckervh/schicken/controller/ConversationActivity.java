@@ -10,6 +10,7 @@ public class ConversationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(getIntent().getExtras().getString("name", "dafuq"));
         setContentView(R.layout.activity_conversation);
     }
 }

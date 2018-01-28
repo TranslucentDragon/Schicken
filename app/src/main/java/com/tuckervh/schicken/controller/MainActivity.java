@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 new RecyclerItemClickListener(this, mRecyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
                         Intent intent = new Intent(context, ConversationActivity.class);
+                        intent.putExtra("name", conversationList.get(position).getName());
                         startActivity(intent);
                     }
 
