@@ -25,11 +25,11 @@ public class Conversation {
         this.name = name;
     }
 
-    public long getNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setNumber(long number) {
+    public void setPhoneNumber(long number) {
         this.phoneNumber = number;
     }
 
