@@ -50,10 +50,10 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Conversation converation = conversationList.get(position);
-        holder.name.setText(converation.getName());
-        holder.initials.setText(converation.getInitials());
-        holder.messageText.setText(converation.getMostRecent().getText());
+        Conversation conversation = conversationList.get(position);
+        holder.name.setText(conversation.getName());
+        holder.initials.setText(conversation.getInitials());
+        holder.messageText.setText(conversation.getMostRecent().getText());
     }
 
     @Override
