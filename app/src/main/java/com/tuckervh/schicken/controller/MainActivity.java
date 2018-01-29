@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.provider.ContactsContract;
 
 import com.tuckervh.schicken.R;
 import com.tuckervh.schicken.model.Conversation;
@@ -12,6 +13,7 @@ import com.tuckervh.schicken.model.Message;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -48,9 +50,15 @@ public class MainActivity extends AppCompatActivity {
         conversationList.add(new Conversation("Tucker VH", "TV", new Message("Test123")));
         Conversation filler = new Conversation("Filler Convo", "FC",
                 new Message("Words that are really long so they take up more than one line!!!"));
-        for (int i = 0; i < 15; i++) {
+
+        for (int i = 0; i < 1; i++) {
             conversationList.add(filler);
         }
+        conversationList.add(new Conversation(
+                ContactsContract.Contacts.DISPLAY_NAME_PRIMARY,
+                ContactsContract.Contacts.CommonDataKinds.Phone.TYPE_HOME,
+                new Message("Etc")));
+
     }
 
 }
