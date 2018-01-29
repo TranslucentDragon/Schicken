@@ -6,6 +6,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.provider.ContactsContract;
+import android.provider.ContactsContract.CommonDataKinds;
 
 import com.tuckervh.schicken.R;
 import com.tuckervh.schicken.model.Conversation;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         }
         conversationList.add(new Conversation(
                 ContactsContract.Contacts.DISPLAY_NAME_PRIMARY,
-                ContactsContract.Contacts.CommonDataKinds.Phone.TYPE_HOME,
+                Integer.toString(CommonDataKinds.Phone.TYPE_HOME),
                 new Message("Etc")));
 
     }
