@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class ContactList {
-    private contactArray = new ArrayList;
+    private List<Conversation> contactArray = new ArrayList;
 
     public ContactList() {
         super();
