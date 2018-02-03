@@ -15,16 +15,15 @@ import java.util.List;
  */
 
 public class ContactList extends AppCompatActivity {
-    private List<Conversation> contactArray = new ArrayList;
+   /* private List<Conversation> contactArray = new ArrayList<>();
 
     public ContactList() {
         super();
         contactArray = getContactArray();
     }
 
-    public List getContactArray() {
-        Cursor cur = getContext().getContentResolver().query();
+    public List getContactArray() {}
 
-        return List;
-    }
+        return contactArray;
+    }*/
 }
