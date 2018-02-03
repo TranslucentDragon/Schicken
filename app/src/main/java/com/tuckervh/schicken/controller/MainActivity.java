@@ -2,6 +2,7 @@ package com.tuckervh.schicken.controller;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -73,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 1; i++) {
             conversationList.add(filler);
         }
+
+        Cursor cur = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,
+                null, null, null, null);
+
+
         conversationList.add(new Conversation(
                 ContactsContract.Contacts.DISPLAY_NAME_PRIMARY,
                 Integer.toString(CommonDataKinds.Phone.TYPE_HOME),
